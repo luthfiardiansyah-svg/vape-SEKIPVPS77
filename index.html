@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sekipvps77</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+      /* BAGIAN 1 */
+      body {
+        background-color: #3397a0;
+        color: #2C1A1D;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4, h5, .font-display {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        color: #2C1A1D;
+      }
+      html { scroll-behavior: smooth;}
+
+  
+        .bg-biru{
+            background-color: rgb(9, 178, 201, 0.6);
+        }
+
+        .nav-link{
+            color: rgba(178, 248, 252) !important;
+        }
+
+          .nav-item > .nav-link:hover,
+          .active{
+            border-bottom: 2px solid rgb(44, 44, 250) !important;
+             color: rgb(44, 44, 250) !important;
+          }
+          /* BAGIAN 2 */
+          #main-content {
+            background-color: #57eef7;
+          }
+
+          .text-content h1 {
+            font-size: 3rem;
+            line-height: 1.12;
+          }
+
+          @media (max-width: 768px) {
+            .text-content h1 { font-size: 2rem; }
+          }
+
+          .hero-section {
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 0 5rem;
+          }
+
+          /*  Maskot animasi */
+          @keyframes floatMascot {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1.5deg); }
+          }
+          .animate-mascot {
+            animation: floatMascot 4.5s ease-in-out infinite;
+          }
+
+
+          .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .hero-pod {
+            position: absolute;
+            inset: 0rem;
+            background: linear-gradient(90deg, rgb(18, 69, 235) 0%, rgb(89, 120, 221) 100%);
+            border-radius: 44px;
+            box-shadow: 0 14px 28px -6px rgba(216, 67, 96, 0.12);
+            border: 4px solid #000000;
+            transform: rotate(2deg);
+          }
+          /* TRUST BAR */
+          .trust-bar {
+            padding: 2rem 0;
+            background: linear-gradient(90deg, rgb(18, 69, 235) 0%, rgb(89, 120, 221) 100%);
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+          }
+          .trust-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            color: #d84360;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+          /* KATEGORI */
+          .kategori-card {
+            background: linear-gradient(90deg, rgb(18, 69, 235) 0%, rgb(89, 120, 221) 100%);
+            border: 1px solid #000000;
+            border-radius: 24px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: all 0.03s ease;
+            cursor: pointer;
+            height: 100%;
+          }
+          .kategori-card:hover {
+            box-shadow: 0 14px 28px -6px rgba(216, 67, 96, 0.12);
+            transform: translateY(-3px);
+          }
+          .kategori-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            background-color: #ffffff;
+            color: #d84360;
+            transition: transform 0.3s ease;
+          }
+
+          /* BEST SELLER */
+          .bestseller-section {
+            padding: 4rem 0;
+            background-color: #57eef7;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+          }
+
+          .product-card {
+            background: linear-gradient(90deg, rgb(18, 69, 235) 0%, rgb(89, 120, 221) 100%);
+            border: 1px solid #000000;
+            border-radius: 30px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            transition: all 0.3s ease;
+          }
+
+          .product-card:hover {
+            box-shadow: 0 14px 28px -6px rgba(216, 67, 96, 0.12);
+          }
+
+          .product-img-wrap {
+            position: relative;
+            height: 220px;
+            background-color: #000000;
+            border: 1px solid #000000;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          }
+
+          .product-img-wrap.choco {
+            background-color: rgba(255, 238, 200);
+          }
+
+          .product-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #D84360;
+            border: 1px solid #F2CED6;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+          }
+
+          .product-tag.green { color: #5B8A61; }
+
+          .product-tag .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #D84360;
+          }
+
+          .product-tag.green .dot {
+            background-color: #5B8A61;
+          }
+
+          .product-icon {
+            width: 200px;
+            height: 200px;
+            transition: transform 0.3s ease;
+          }
+
+          .product-card:hover .product-icon {
+            transform: scale(1.05);
+          }
+
+          .product-footer {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(233, 212, 217, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          /* TENTANG */
+          .tentang-section {
+            padding: 4rem 0;
+          }
+
+          .tentang-card {
+            background: linear-gradient(90deg, rgb(18, 69, 235) 0%, rgb(89, 120, 221) 100%);
+            border: 1px solid #000000;
+            border-radius: 36px;
+            padding: 3rem 2rem;
+            box-shadow: 0 14px 28px -6px rgba(223, 40, 77, 0.12);
+          }
+
+          .mascot-badge-circle {
+            width: 192px;
+            height: 192px;
+            margin: 0 auto;
+            background: #57eef7;
+            border: 4px solid #000000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+          }
+
+          /* TESTIMONI */
+          .testimoni-section {
+            padding: 4rem 0;
+            background-color: #57eef7;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+          }
+
+          .testi-card {
+            background: linear-gradient(90deg, rgb(18, 69, 235) 0%, rgb(89, 120, 221) 100%);
+            border: 1px solid #000000;
+            border-radius: 24px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+          }
+
+          .testi-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            background-color: #FCE7EC;
+            color: #D84360;
+          }
+
+          .testi-avatar img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100px;
+          }
+          .testi-avatar.cream {
+            background-color: #FFF8F0;
+            color: #2C1A1D;
+          }
+          /* GALERI */
+          .galeri-section {
+            padding: 4rem 0;
+          }
+          .galeri-box {
+            aspect-ratio: 1 / 1;
+            border-radius: 16px;
+            border: 1px solid #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #FFFF;
+          }
+          .galeri-box:hover {
+            opacity: 0.9;
+          }
+          .galeri-1 {
+            background: linear-gradient(rgba(255, 255, 255, 0.171), rgba(0, 0, 0, 0.281)),
+            url('gambar/gallery-1.png');
+            background-size: cover;
+          }
+          .galeri-2 {
+            background: linear-gradient(rgba(255, 255, 255, 0.171), rgba(0, 0, 0, 0.281)),
+            url('gambar/gallery-2.png');
+            background-size: cover;
+          }
+          .galeri-3 {
+            background: linear-gradient(rgba(255, 255, 255, 0.171), rgba(0, 0, 0, 0.281)),
+            url('gambar/gallery-3.png');
+            background-size: cover;
+          }
+          .galeri-4 {
+            background: linear-gradient(rgba(255, 255, 255, 0.171), rgba(0, 0, 0, 0.281)),
+            url('gambar/gallery-4.png');
+            background-size: cover;
+          }
+          /* CTA */
+          .cta-section {
+            padding: 4rem 0;
+          }
+
+          .cta-box {
+            background: linear-gradient(90deg, rgb(18, 69, 235) 0%, rgb(89, 120, 221) 100%);
+            border-radius: 36px;
+            padding: 3rem 2rem;
+            color: #fff;
+            box-shadow: 0 14px 28px -6px rgba(216, 67, 96, 0.12);
+            position: relative;
+            overflow: hidden;
+          }
+
+          .cta-box::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            right: -40px;
+            width: 256px;
+            height: 256px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(40px);
+            pointer-events: none;
+          }
+          /* FOOTER */
+          .footer-tntyna {
+            background-color: #57eef7;
+            border-top: 1px solid #000000;
+            padding: 4rem 0 3rem;
+          }
+
+          .footer-tntyna h4 {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+          }
+
+          .footer-tntyna a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s ease;
+          }
+
+          .footer-tntyna a:hover {
+            color: rgb(18, 69, 235);
+          }
+
+          .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background-color: rgb(206, 217, 250);
+            border: 1px solid #000000;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #2C1A1D;
+            transition: color 0.2s ease;
+          }
+
+          .social-btn:hover {
+            color: #D84360;
+          }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-biru sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="gambar/gambar-hero.png" alt="" width="70" height="70">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Promo</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="#">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Kontak</a>
+          </li>  
+            </ul>
+           <ul class="navbar-nav gap-3">
+            <li class="nav-item">
+              <a href="#" class="btn btn-light position-relative rounded-pill">
+                <i class="bi bi-bag-dash-fill"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  <span class="visually-hidden">Keranjang Kosong</span>
+                  99+
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+            </li>
+           </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- MAIN CONTENT -->
+      <main id="main-content">
+        <section id="home" class="hero-section">
+          <div class="container position-relative" style="z-index: 1;">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-7 text-content text-center text-lg-start">
+                <h1 class="mb-3">
+                  Your Style, Your Vibe with SEKIPVPS77
+                  Temukan gaya dan karakter unik bersama SEKIPVPS77.
+                </h1>
+                <p class="text-secondary mb-4 mx-auto mx-lg-0" style="max-width: 36rem; color: #73575C !important;">
+                  Jelajahi dunia vape dengan desain modern, pilihan produk berkualitas, dan pengalaman belanja yang praktis. Temukan produk yang sesuai dengan kebutuhanmu di SEKIPVPS77.
+                </p>
+                <div class="action d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                  <a href="#" class="btn btn-primary fw-bold px-4 py-3 rounded-4 d-inline-flex align-items-center justify-content-center gap-2">Jelajahi Produk</a>
+                  <a href="#" class="btn btn-dark fw-bold px-4 py-3 rounded-4 border">Pesan Sekarang</a>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="hero-image-wrapper">
+                  <div class="hero-pod"></div>
+                  <img 
+                    src="gambar/gambar-hero.png" 
+                    alt="Maskot SEKIPVPS77"
+                    class="img-fluid position-relative animate-mascot"
+                    style="z-index: 1; max-width: 380px"
+                    />
+                </div>
+              </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- TRUST BAR -->
+        <section class="trust-bar">
+          <div class="container">
+            <div class="row g-4 text-center">
+              <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="trust-icon">
+                    <i class="bi bi-collection"></i>
+                  </div>
+                  <div class="text-start">
+                    <h4 class="h6 fw-bold mb-0">Pilihan Vape Lengkap</h4>
+                    <p class="small text-light mb-0">Koleksi perangkat dan aksesori bervariasi</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="trust-icon">
+                    <i class="bi bi-droplet"></i>
+                  </div>
+                  <div class="text-start">
+                    <h4 class="h6 fw-bold mb-0">Varian Liquid Pilihan</h4>
+                    <p class="small text-light mb-0">Berbagai rasa cair berkualitas tinggi</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="trust-icon">
+                    <i class="bi bi-cpu"></i>
+                  </div>
+                  <div class="text-start">
+                    <h4 class="h6 fw-bold mb-0">Cartridge Siap Pakai</h4>
+                    <p class="small text-light mb-0">Stok komponen pengganti selalu tersedia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="trust-icon">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <div class="text-start">
+                    <h4 class="h6 fw-bold mb-0">Jaminan Toko Satu Minggu</h4>
+                    <p class="small text-light mb-0">Perlindungan pembelian selama tujuh hari</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- KATEGORI CONTENT -->
+        <section id="kategori" class="py-5">
+          <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 36rem;">
+              <span class="text-danger fw-bold text-uppercase small" style="letter-spacing: 0.05em;">Pilihan Vaping</span>
+            
+            <h2 class="mt-1">Temukan Kebutuhan Vaping Anda</h2>
+          </div>
+            <div class="row g-4">
+              <div class="col-6 col-md-3">
+                <div class="kategori-card">
+                  <div class="kategori-icon">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Perangkat Vape</h3>
+                  <p class="small text-light mb-0">Berbagai pilihan device modern berkualitas</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="kategori-card">
+                  <div class="kategori-icon">
+                    <i class="bi bi-droplet"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Liquid Varian Rasa</h3>
+                  <p class="small text-light mb-0">Pilihan liquid bebas nikmati sensasi</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="kategori-card">
+                  <div class="kategori-icon">
+                    <i class="bi bi-cpu"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Cartridge & Coil</h3>
+                  <p class="small text-light mb-0">Komponen suku cadang lengkap terpilih</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="kategori-card">
+                  <div class="kategori-icon">
+                    <i class="bi bi-tools"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Aksesoris Tambahan</h3>
+                  <p class="small text-light mb-0">Perlengkapan pendukung aktivitas vaping anda</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BEST SELLER -->
+<section id="bestseller" class="bestseller-section">
+  <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-5">
+          <div>
+              <span class="text-danger fw-bold text-uppercase small" style="letter-spacing: .05em;">Koleksi Vape & Liquid</span>
+              <h2 class="mt-1">Produk Unggulan SEKIPVPS77</h2>
+          </div>
+
+          <p class="text-secondary small mb-0 mt-2 mt-md-0" style="max-width: 24rem;">
+            Pilihan vape dan liquid untuk pelanggan dewasa 18+ sesuai koleksi yang tersedia.
+          </p>
+      </div>
+
+      <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+              <article class="product-card">
+                  <div>
+                      <div class="product-img-wrap">
+                          <div class="product-tag">
+                              <span class="dot"></span>
+                              <span>Mod</span>
+                          </div>
+                          <img src="gambar/gambar produk-1.png" alt="" class="product-icon">
+                      </div>
+
+                      <div class="mt-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <span class="small fw-semibold text-light text-uppercase" style="letter-spacing: .05em;">HEXOHM V3.0 ANODIZED</span>
+                              <span class="small fw-bold text-warning"><i class="bi bi-star-fill"> 4.9 (184)</i> 
+                              </span>
+                          </div>
+
+                          <h3 class="h5 mt-2 text-light mb-1">Perangkat Vape</h3>
+                          <p class="small text-light mb-0">
+                            Pilihan perangkat vape untuk pelanggan dewasa sesuai koleksi yang tersedia. 
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="product-footer">
+                      <div>
+                          <span class="d-block" style="font-size: 11px; color: #ffffff;">
+                            MOD PILIHAN  
+                          </span>
+                          <span class="font-display text-light fw-bold fs-5">
+                           Rp 4.200.000  
+                          </span>
+                      </div>
+
+                      <button
+                          onclick="handleAddToCart('Hexohm V3.0 Anodized', 88000)"
+                          class="btn btn-success btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                      >
+                          <i class="bi bi-plus-lg"></i> Pesan
+                      </button>
+                  </div>
+              </article>
+          </div>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <article class="product-card">
+                    <div>
+                        <div class="product-img-wrap">
+                            <div class="product-tag">
+                                <span class="dot"></span>
+                                <span>Pod</span>
+                            </div>
+                            <img src="gambar/gambar produk-2.png" alt="" class="product-icon">
+                        </div>
+  
+                        <div class="mt-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="small fw-semibold text-light text-uppercase" style="letter-spacing: .05em;">CENTAURUS E40 ULTRA</span>
+                                <span class="small fw-bold text-warning"><i class="bi bi-star-fill"> 4.9 (184)</i> 
+                                </span>
+                            </div>
+  
+                            <h3 class="h5 mt-2 text-light mb-1">Perangkat Vape</h3>
+                            <p class="small text-light mb-0">
+                              Pilihan perangkat vape untuk pelanggan dewasa sesuai koleksi yang tersedia. 
+                            </p>
+                        </div>
+                    </div>
+  
+                    <div class="product-footer">
+                        <div>
+                            <span class="d-block" style="font-size: 11px; color: #ffffff;">
+                              POD PILIHAN  
+                            </span>
+                            <span class="font-display text-light fw-bold fs-5">
+                             Rp 310.000  
+                            </span>
+                        </div>
+  
+                        <button
+                            onclick="handleAddToCart('Pod Centaurus E40 Ultra', 88000)"
+                            class="btn btn-success btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                        >
+                            <i class="bi bi-plus-lg"></i> Pesan
+                        </button>
+                    </div>
+                </article>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="product-card">
+                  <div>
+                      <div class="product-img-wrap">
+                          <div class="product-tag">
+                              <span class="dot"></span>
+                              <span>Liquid</span>
+                          </div>
+                          <img src="gambar/gambar produk-3.png" alt="" class="product-icon">
+                      </div>
+
+                      <div class="mt-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <span class="small fw-semibold text-light text-uppercase" style="letter-spacing: .05em;">DARK LUNA 3MG</span>
+                              <span class="small fw-bold text-warning"><i class="bi bi-star-fill"> 4.9 (184)</i> 
+                              </span>
+                          </div>
+
+                          <h3 class="h5 mt-2 text-light mb-1">Liquid Vape</h3>
+                          <p class="small text-light mb-0">
+                            Liquid vape dengan pilihan produk yang tersedia di SEKIPVPS77. 
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="product-footer">
+                      <div>
+                          <span class="d-block" style="font-size: 11px; color: #ffffff;">
+                            LIQUID PILHAN 
+                          </span>
+                          <span class="font-display text-light fw-bold fs-5">
+                           Rp 145.000  
+                          </span>
+                      </div>
+
+                      <button
+                          onclick="handleAddToCart('Liquid Dark Luna', 88000)"
+                          class="btn btn-success btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                      >
+                          <i class="bi bi-plus-lg"></i> Pesan
+                      </button>
+                  </div>
+              </article>
+          </div>
+          </div>
+      </div>
+</section>
+
+        <!-- TENTANG -->
+<section id="tentang" class="tentang-section">
+  <div class="container">
+      <div class="tentang-card">
+          <div class="row g-5 align-items-center">
+              <div class="col-lg-5 text-center">
+                  <div class="mascot-badge-circle">
+                      <img src="gambar/logo-2-removebg.png" alt="">
+                  </div>
+                  <h3 class="h5 text-black mt-4">PILIHAN VAPESTORE SEKIPVPS77</h3>
+                  <p class="small text-light mb-0">
+                    Produk vape/liquid/aksesoris lainnya dari SEKIPVPS77
+                  </p>
+              </div>
+
+              <div class="col-lg-7">
+                  <span
+                      class="text-danger fw-bold text-uppercase small"
+                      style="letter-spacing: 0.05em"
+                  >Tentang SekipVPS77</span>
+
+                  <h2 class="text-black mt-2">
+                    Temukan Pilihan Vape dan Liquid untuk Pengguna 18+
+                  </h2>
+
+                  <p class="text-light">
+                    SekipVPS77 hadir sebagai vapestore yang menyediakan berbagai pilihan vape, liquid, dan kebutuhan vaping lainnya untuk pelanggan berusia 18 tahun ke atas. Kami menghadirkan pilihan produk yang dapat disesuaikan dengan preferensi pengguna, dengan fokus pada pengalaman berbelanja yang praktis dan pilihan produk yang relevan.
+
+                  </p>
+
+                  <div class="row g-3 pt-2">
+                      <div class="col-sm-6">
+                          <div
+                              class="bg-info rounded-3 border p-3 small fw-semibold d-flex align-items-center gap-2"
+                              style="border-color: #000000 !important"
+                          >
+                              <span
+                                  class="d-inline-block rounded-circle bg-danger"
+                                  style="width: 8px; height: 8px"
+                              ></span>
+                              Pilihan Vape dan Liquid
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                          <div
+                              class="bg-info rounded-3 border p-3 small fw-semibold d-flex align-items-center gap-2"
+                              style="border-color: #000000 !important"
+                          >
+                              <span
+                                  class="d-inline-block rounded-circle bg-danger"
+                                  style="width: 8px; height: 8px"
+                              ></span>
+                              Khusus Pelanggan 18+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+        
+        <!-- TESTIMONI -->
+<section id="testimoni" class="testimoni-section">
+  <div class="container">
+      <div class="text-center mx-auto mb-5" style="max-width: 36rem;">
+          <span class="text-danger fw-bold text-uppercase small" style="letter-spacing: .05em;">Kata Mereka</span>
+          <h2 class="mt-1">Ulasan Pelanggan Setia</h2>
+      </div>
+
+      <div class="row g-4">
+          <div class="col-md-4">
+              <div class="testi-card">
+                  <div>
+                      <div class="text-warning mb-2">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                      <p class="small mb-0 text-light">“Pelayanannya ramah dan responsif. Produk yang tersedia cukup lengkap, dan proses pemesanannya juga cepat. Tokonya nyaman dan informasinya jelas. Pengalaman belanja di sini sangat memuaskan.”</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <div class="testi-avatar"><img src="gambar/PAP-1.jpeg" alt=""></div>
+                      <div>
+                          <h4 class="h6 mb-0">MasaLalu09</h4>
+                          <span class="small text-light">Batam</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+              <div class="testi-card">
+                  <div>
+                      <div class="text-warning mb-2">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                      <p class="small mb-0 text-light">“Toko terpercaya dengan pelayanan yang cepat dan ramah. Produk tertata dengan baik dan informasi produknya mudah dipahami.”</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <div class="testi-avatar"><img src="gambar/PAP-2.png" alt=""></div>
+                      <div>
+                          <h4 class="h6 mb-0">MatchaDepan01</h4>
+                          <span class="small text-light">Lubuk Pakam</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+              <div class="testi-card">
+                  <div>
+                      <div class="text-warning mb-2">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                      <p class="small mb-0 text-light">“Pengalaman belanja yang menyenangkan. Admin responsif, proses pesanan cepat, dan pilihan produknya cukup beragam.”</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <div class="testi-avatar"><img src="gambar/PAP-3.jpeg" alt=""></div>
+                      <div>
+                          <h4 class="h6 mb-0">MantanKandung91</h4>
+                          <span class="small text-light">Bandung</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+        <!-- GALERI -->
+<section class="galeri-section">
+ <div class="container text-center">
+  <span 
+    class="text-danger fw-bold text-uppercase small"
+    style="letter-spacing: 0.05em;"
+    >S e k i p  V p s 77</span
+  >
+  <h2 class="mt-1 mb-4">Momen Manis Di Instagram</h2>
+
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="galeri-box galeri-1">@ProdukTerbaruSekipVps77</div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="galeri-box galeri-2">#ChillTogether</div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="galeri-box galeri-3">#LiquidCollection</div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="galeri-box galeri-4">#ProdukPilihanSekipVps77</div>
+    </div>
+  </div>
+ </div> 
+</section>
+         <!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="row align-items-center g-4 position-relative" style="z-index: 1;">
+
+        <div class="col-md-8 text-center text-md-start">
+          <h2 class="text-white mb-2">Temukan Koleksi Vape dan Liquid Pilihanmu!</h2>
+
+          <p class="text-white-50 mb-0">
+            Jelajahi berbagai pilihan vape, liquid, dan produk lainnya untuk pelanggan berusia 18 tahun ke atas.
+          </p>
+        </div>
+
+        <div class="col-md-4 text-center text-md-end">
+          <a href="#bestseller" class="btn btn-primary fw-bold text-light px-4 py-3 rounded-4">
+            Beli Sekarang
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+         <!-- FOOTER -->
+<footer class="footer-sekipvps77">
+  <div class="container">
+    <div class="row g-4 pb-4 border-bottom" style="border-color: rgba(242, 206, 214, 0.6) !important;">
+
+      <div class="col-md-4">
+        <div class="d-flex align-items-center mb-3">
+          <img src="gambar/logo-transparant1-1.png" alt="" width="48" class="me-2" />
+          <span class="font-display fs-4 fw-bold">
+            SEKIPVPS77<span class="text-danger">.</span>
+          </span>
+        </div>
+
+        <p class="small text-secondary mb-2">
+          Toko vape yang menyediakan berbagai pilihan vape, liquid, dan produk terkait untuk pelanggan berusia 18 tahun ke atas.
+        </p>
+
+        <p class="small fw-semibold mb-0">Jam Operasional: 08:00 - 22:00 WIB</p>
+      </div>
+
+      <div class="col-6 col-md-2">
+        <h4>Navigasi</h4>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#kategori">Kategori Produk</a></li>
+          <li><a href="#bestseller">Best Seller</a></li>
+          <li><a href="#tentang">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2">
+        <h4>Layanan Konsumen</h4>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+          <li><a href="#">Koleksi Vape</a></li>
+          <li><a href="#">Koleksi Liquid</a></li>
+          <li><a href="#">Cara Pemesanan</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h4>Hubungi Kami</h4>
+        <p class="small text-secondary mb-3">
+          Jl.Pantai Labu,Sekip - Lubuk Pakam
+        </p>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="#" class="social-btn" aria-label="Instagram SEKIPVPS77">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="#" class="social-btn" aria-label="WhatsApp Pemesanan">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+          <a href="#" class="social-btn" aria-label="Facebook Pemesanan">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a href="#" class="social-btn" aria-label="Tiktok Pemesanan">
+            <i class="bi bi-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pt-3 d-flex flex-column flex-sm-row justify-content-between align-items-center small text-secondary gap-2">
+      <p class="mb-0"> © 2026 SEKIPVPS77. Seluruh hak cipta dilindungi undang-undang.</p>
+      <p class="mb-0">Khusus pelanggan berusia 18 tahun ke atas.</p>
+    </div>
+
+  </div>
+</footer>               
+      </main>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
